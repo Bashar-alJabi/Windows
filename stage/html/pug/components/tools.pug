@@ -1,0 +1,69 @@
+.tools.rounded-top-3.p-2.d-none.d-md-block
+    .angle: i.fa-solid.fa-angle-left.icon.right
+    ul.open.list-unstyled.d-flex.justify-content-around.align-items-center
+        li.wifi
+            i.fa-solid.fa-wifi.icon
+        li.bluetooth
+            i.fa-brands.fa-bluetooth-b.icon
+        li.brightness
+            i.fa-regular.fa-sun.icon
+        li.volume
+            i.fa-solid.fa-volume-high.icon
+        li.battery
+            i.fa-solid.fa-battery-half.icon
+    .control-brightness
+        input.brightness-range(type='range' min='25' max='175' value='100')
+        span.number-range.user-select-none
+    .control-volume
+        input.volume-range(type='range' min='0' max='100' value='50')
+        span.number-range.user-select-none
+    .battery-info.rounded-3.p-3.user-select-none
+        .info
+            .fa-solid.fa-battery-half.fa-2xl
+            span.ms-2 50%
+        span.remaining
+            | 1 hours 22 minutes remaining
+    .wifi-info.rounded-3.p-3
+        .head.d-flex.justify-content-between.align-items-center
+            .title.d-flex.align-items-center
+                .icon: i.fa-solid.fa-angle-left
+                span.ms-2.user-select-none Wi-Fi
+            label.check
+                input(type="checkbox" checked).toggle-checkbox
+                .toggle-switch
+        .content.mt-2.mb-2
+            - var namesWifi = ['Home', 'Job', 'Hotel', 'Restaurant']
+            - var statusWifi = ['Secured', 'Secured', 'Secured', 'Secured']
+            each nameWifi, index in namesWifi
+                .box.mt-2.mb-2.me-2.p-2(class= index === 0 ? 'selected' : '')
+                    .info.d-flex.justify-content-between.align-items-center.mb-2
+                        i.fa-solid.fa-wifi
+                        .text.ms-2.user-select-none
+                            span.name.d-block= nameWifi
+                        i.fa-solid.fa-circle-info.icon
+                    .status.user-select-none= statusWifi[index]
+                    .auto-connect.mb-2
+                        input(type="checkbox" id= index).check
+                        label(for= index).text.user-select-none Connect automatically
+                    .connect.btn.btn-info.ps-4.pe-4.mt-1 Connect
+        .foot: .all.text-center.user-select-none More Wi-Fi settings
+    .bluetooth-info.rounded-3.p-3
+        .head.d-flex.justify-content-between.align-items-center
+            .title.d-flex.align-items-center
+                .icon: i.fa-solid.fa-angle-left
+                span.ms-2.user-select-none Bluetooth
+            label.check
+                input(type="checkbox" checked).toggle-checkbox
+                .toggle-switch
+        .content.mt-2.mb-2
+            - var namesBluetooth = ['Desktop', 'Mi', 'LBS', 'Iphone', 'PC']
+            - var iconsBluetooth = ['fa-solid fa-desktop', 'fa-solid fa-mobile-screen', 'fa-solid fa-headset', 'fa-solid fa-mobile-screen', 'fa-solid fa-desktop']
+            each nameBluetooth, index in namesBluetooth
+                .box.mt-2.mb-2.me-2.p-2(class= index === 0 ? 'selected' : '')
+                    .info.d-flex.justify-content-between.align-items-center.mb-2
+                        i(class= iconsBluetooth[index])
+                        .text.ms-2.user-select-none
+                            span.name.d-block= nameBluetooth
+                        i.fa-solid.fa-circle-info.icon
+                    .connect.btn.btn-info.ps-4.pe-4.mt-1 Connect
+        .foot: .all.text-center.user-select-none More Bluetooth settings

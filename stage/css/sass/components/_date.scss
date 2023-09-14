@@ -1,0 +1,34 @@
+.time-date {
+    height: 2.75rem;
+    // background-color: $halfTransparent;
+    line-height: 0.9;
+    text-align: center;
+    position: relative;
+    transition: background-color 0.3s;
+    .time,
+    .month {
+        span {
+            font-size: 0.8rem;
+            // color: $flatWhite;
+        }
+    }
+    .toolkit {
+        position: absolute;
+        // background-color: $halfTransparent;
+        backdrop-filter: $blur-25;
+        // color: $flatWhite;
+        font-size: 0.7rem;
+        top: -3.85rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        line-height: 1.1;
+        display: none;
+        span {
+            white-space: nowrap;
+        }
+    }
+    &:hover .toolkit {
+        display: block;
+    }
+}

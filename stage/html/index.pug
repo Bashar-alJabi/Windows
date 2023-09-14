@@ -1,0 +1,25 @@
+-var pageTitle = 'Windows';
+
+doctype html
+html(lang="en")
+    head
+        include pug/layout/meta
+        include pug/layout/styles
+    body
+        .overlay-brightness
+            .desktop-page.position-relative.min-vh-100.overflow-hidden
+                include pug/pages/desktop-page
+                .taskbar-nav.position-absolute.d-flex.justify-content-between.align-items-center
+                    .left-container.d-none.d-md-flex.justify-content-between.align-items-end
+                        include pug/components/fullscreen
+                        include pug/components/weather
+                    .folders-container
+                        include pug/components/folders
+                    .center-container
+                        include pug/components/navigation
+                    .right-container.d-flex.justify-content-between.align-items-center
+                        include pug/components/tools
+                        include pug/components/date
+                        include pug/components/notifications
+        audio#startup-sound(src="sounds/Windows-Startup.mp3" preload="auto")
+        include pug/layout/scripts

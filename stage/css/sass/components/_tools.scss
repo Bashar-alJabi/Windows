@@ -1,0 +1,343 @@
+.tools {
+    height: 2.75rem;
+    // background-color: $halfTransparent;
+    position: relative;
+    transition: background-color 0.3s;
+    &::before {
+        content: "";
+        position: absolute;
+        left: -1.3rem;
+        top: 0.55rem;
+        width: 1.3rem;
+        height: 1.7rem;
+        border-radius: 12rem 0 0 12rem;
+        // background-color: $halfTransparent;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .angle {
+        position: absolute;
+        left: -1.2rem;
+        top: 0.6rem;
+        width: 1.3rem;
+        height: 1.5rem;
+        border-radius: 12rem 0 0 12rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        .icon {
+            // color: #aaa;
+            font-size: 0.9rem;
+            &.right {
+                transform: rotate(180deg);
+            }
+        }
+        &:hover .icon {
+            // color: #ccc;
+            position: relative;
+            animation: shake-left 0.8s infinite;
+            &.right {
+                animation: shake-right 0.8s infinite;
+            }
+        }
+        @keyframes shake-left {
+            0% {
+                left: 0rem;
+            }
+            50% {
+                left: -0.1rem;
+            }
+            100% {
+                left: 0rem;
+            }
+        }
+        @keyframes shake-right {
+            0% {
+                right: 0rem;
+            }
+            50% {
+                right: -0.1rem;
+            }
+            100% {
+                right: 0rem;
+            }
+        }
+    }
+    ul {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2rem;
+        width: 6rem;
+        transition: width 0.3s, display 0.3s;
+        &.open {
+            width: 10rem;
+            .wifi, .bluetooth {
+                display: flex;
+            }
+        }
+        li {
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1.75rem;
+            height: 1.75rem;
+            &::before {
+                content: "";
+                position: absolute;
+                // background-color: #fff;
+                @include circle(1.75rem);
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+            &:hover::before {
+                opacity: 1;
+            }
+            &.active {
+                // background-color: #fff;
+                border-radius: 50%;
+                z-index: 1;
+            }
+            .icon {
+                font-size: 0.9rem;
+                // color: $flatWhite;
+                position: relative;
+                z-index: 1;
+            }
+            // &:hover .icon,
+            // &.active .icon {
+            //     color: #000;
+            // }
+            &.wifi, &.bluetooth {
+                display: none;
+            }
+        }
+    }
+    .control-brightness,
+    .control-volume {
+        position: absolute;
+        top: -2rem;
+        right: 0;
+        // background-color: $halfTransparent;
+        backdrop-filter: $blur-25;
+        height: 1rem;
+        border-radius: 1rem;
+        padding: 0.75rem;
+        align-items: center;
+        .brightness-range,
+        .volume-range {
+            width: 7rem;
+            height: 0.25rem;
+            margin-right: 0.5rem;
+            z-index: 10;
+            cursor: pointer;
+        }
+        // .number-range {
+        //     color: $flatWhite;
+        // }
+    }
+    .battery-info {
+        position: absolute;
+        top: -7.5rem;
+        right: 0;
+        width: 10rem;
+        // background-color: $halfTransparent;
+        backdrop-filter: $blur-25;
+        z-index: 10;
+        display: none;
+        .info{
+            // color: $flatWhite;
+            span {
+                margin-left: 0.5rem;
+                font-size: 1.2rem;
+            }
+        }
+        .remaining {
+            font-size: 0.88rem;
+            // color: #bbb;
+        }
+    }
+    .wifi-info, .bluetooth-info {
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        width: 16rem;
+        background-color: $halfTransparent;
+        backdrop-filter: $blur-25;
+        transition: 0.3s;
+        z-index: 10;
+        &.open {
+            top: -22.3rem;
+        }
+        .head {
+            .title {
+                // color: $flatWhite;
+                .icon{
+                    cursor: pointer;
+                }
+            }
+            .check {
+                .toggle-checkbox {
+                    appearance: none;
+                    display: none;
+                    &:checked + .toggle-switch {
+                        background-color: $flatBlue;
+                    }
+                    &:checked + .toggle-switch::before {
+                        content: "\f00c";
+                        left: 1.3rem;
+                        color: $flatBlue;
+                    }
+                }
+                .toggle-switch {
+                    background-color: #ccc;
+                    width: 2.5rem;
+                    height: 1.3rem;
+                    border-radius: 1rem;
+                    position: relative;
+                    transition: 0.3s;
+                    cursor: pointer;
+                    &::before {
+                        font-family: "Font Awesome 6 Free";
+                        content: "\f00d";
+                        font-weight: 900;
+                        font-size: 0.75rem;
+                        position: absolute;
+                        background-color: white;
+                        @include circle(1rem);
+                        top: 0.15rem;
+                        left: 0.2rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #aaa;
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+        .content {
+            height: 16rem;
+            overflow: auto;
+            // color: $flatWhite;
+            @extend %scrollbar-Transparent;
+            .box {
+                cursor: pointer;
+                border-width: 0.1rem;
+                border-style: solid;
+                border-radius: 5%;
+                &.selected {
+                    // background-color: $quarterTransparent;
+                    cursor: default;
+                    .connect {
+                        display: block;
+                    }
+                }
+                .info {
+                    .text {
+                        flex: 1;
+                        font-size: 0.9rem;
+                    }
+                    .icon {
+                        // color: #00bcd4;
+                        cursor: pointer;
+                    }
+                }
+                .connect {
+                    font-size: 0.8rem;
+                    padding: 0.1rem;
+                    display: none;
+                    width: fit-content;
+                    margin-left: auto;;
+                }
+            }
+        }
+        .foot {
+            .all {
+                cursor: pointer;
+                font-size: 0.85rem;
+                // color: #aaa;
+                // &:hover {
+                //     color: #ccc;
+                // }
+            }
+        }
+    }
+    .wifi-info {
+        .content {
+            .box {
+                &.selected {
+                    .info {
+                        .text {
+                            position: relative;
+                            top: -0.2rem;
+                        }
+                    }
+                    .status {
+                        display: block;
+                    }
+                    .auto-connect {
+                        display: inline-flex;
+                    }
+                }
+                .status {
+                    // color: #ccc;
+                    width: fit-content;
+                    font-size: 0.85rem;
+                    position: relative;
+                    top: -0.75rem;
+                    left: 1.75rem;
+                    display: none;
+                }
+                .auto-connect {
+                    font-size: 0.8rem;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    gap: 0.25rem;
+                    display: none;
+                    .check {
+                        appearance: none;
+                        cursor: pointer;
+                        &:checked ~ .text::after {
+                            transform: scale(1);
+                        }
+                    }
+                    .text {
+                        cursor: pointer;
+                        position: relative;
+                        &::before, &::after {
+                            position: absolute;
+                            left: -1rem;
+                            top: 0.22rem;
+                            border-radius: 0.25rem;
+                            width: 0.75rem;
+                            height: 0.75rem;
+                        }
+                        &::before {
+                            content: "";
+                            border-width: 0.15rem;
+                            border-style: solid;
+                        }
+                        &::after {
+                            font-family: "Font Awesome 6 Free";
+                            content: "\f00c";
+                            font-weight: 900;
+                            background-color: $flatBlue;
+                            // color: $flatWhite;
+                            font-size: 0.5rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transform: scale(0);
+                            transition: 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

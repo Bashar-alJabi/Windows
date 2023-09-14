@@ -1,0 +1,36 @@
+.time-desktop.text-center.user-select-none
+    .clock.fw-bold: span
+    .date.fw-bold: span
+
+.widgets
+    .news.rounded-3
+        .head.p-2.d-flex.justify-content-between.align-items-center
+            span.icon.fw-bold.user-select-none
+                i.fa-regular.fa-newspaper
+                | News
+            span.more-options.rounded-5.d-flex.justify-content-center.align-items-center
+                i.fa-solid.fa-ellipsis
+            .option.rounded-bottom-3.p-2.user-select-none Hide News
+        .content.p-2.m-2.text-center
+        .foot.d-flex.justify-content-center.p-2
+            .all-news.text-center.user-select-none See Full News
+    .full-news.rounded-3.p-3
+        .head.mb-2.user-select-none
+            span.text News
+            .close-button.btn.btn-secondary.d-flex.justify-content-center.align-items-center
+                i.fa-solid.fa-close.fa-lg.icon
+        .content.p-2.pt-3
+
+.desktop-programs
+    .apps.d-flex.align-items-center
+        - var namesApps = ['This PC', 'Recycle Bin', 'Besho']
+        - var iconsApps = [ 'desktop.svg', 'recycle.svg', 'folder.svg']
+        - var classApps = [ 'pc', 'recycle-bin', 'personal-folder']
+        each nameApp, index in namesApps
+            div(class=`${classApps[index]}`).app.rounded-3.text-center.user-select-none
+                .icon-app: img(src=`imgs/${iconsApps[index]}`, alt= iconsApps[index])
+                div(class=`${classApps[index]}`).app-desktop= nameApp
+    .page-programs
+        include ./programs/pc
+        include ./programs/recycle-bin
+        include ./programs/personal-folder

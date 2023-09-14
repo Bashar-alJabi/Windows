@@ -1,0 +1,16 @@
+.fullscreen {
+    // background-color: $halfTransparent;
+    backdrop-filter: $blur-25;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0 12rem 0 0;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    .icon {
+        font-size: 0.8rem;
+        // color: $flatWhite;
+        position: absolute;
+        left: 20%;
+        top: 35%;
+    }
+}

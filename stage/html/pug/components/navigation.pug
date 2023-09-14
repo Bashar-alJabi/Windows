@@ -1,0 +1,100 @@
+.navigation
+    .main-menu.rounded-top-3
+        ul.list-unstyled.d-flex.justify-content-around.align-items-center
+            li.menu
+                i.fa-brands.fa-windows.icon
+            li.search
+                i.fa-solid.fa-magnifying-glass.icon
+            li.settings
+                i.fa-solid.fa-gear.icon
+
+    .menu-bar.rounded-3.p-3.pt-4
+        .search
+            i.fa-solid.fa-magnifying-glass.icon
+            input.input-search.rounded-5.p-1.ps-5(type="text" placeholder="Search for apps, settings, and documents")
+        .pinned.pt-4.ms-0.ms-md-3.me-3
+            .title.d-flex.justify-content-between.align-items-center
+                span.name.user-select-none.ms-0.ms-md-3
+                    | Pinned
+                .button.btn.btn-secondary.p-1.ps-2.pe-2.d-flex.align-items-center
+                    | All apps
+                    i.fa-solid.fa-angle-right.icon
+            .apps.row.text-center.pt-3
+                - var namesApps = ['Calculator', 'Calender', 'Clock', 'Notepad', 'GitHub', 'Adobe XD', 'Mail', 'Microsoft 365', 'Photos', 'Movies & TV']
+                - var iconsApps = ['calculator.svg', 'calendar.svg', 'clock.svg', 'notepad.svg', 'github.svg', 'xd.svg', 'mail.svg', 'Microsoft_365.svg', 'photos.svg', 'movies.svg']
+                each nameApp, index in namesApps
+                    .app.col-4.col-md-3.rounded-3.p-2.user-select-none
+                        .icon-app: img(src=`imgs/${iconsApps[index]}`, alt= iconsApps[index])
+                        .name-app= nameApp
+        .recommended.pt-4.ms-0.ms-md-3.me-3
+            .title.d-flex.justify-content-between.align-items-center
+                span.name.user-select-none.ms-0.ms-md-3
+                    | Recommended
+                .button.btn.btn-secondary.p-1.ps-2.pe-2.d-flex.align-items-center
+                    | More
+                    i.fa-solid.fa-angle-right.icon
+            .apps.row.pt-3.ms-0.ms-md-2
+                - var namesApps = ['VS Code', 'desktop.html', 'Microsoft Team', 'Skype', 'Adobe Acrobat']
+                - var iconsApps = ['vscode.svg', 'edge.svg', 'microsoft-team.svg', 'skype.svg', 'pdf.svg']
+                - var timeApps = ['1h ago', '7h ago', '11h ago', '15h ago', 'Friday']
+                each nameApp, index in namesApps
+                    .app.col-6.rounded-3.p-2.ps-3.d-flex.justify-content-start.align-items-center.user-select-none
+                        .icon-app: img(src=`imgs/${iconsApps[index]}`, alt= iconsApps[index])
+                        .info
+                            .name-app= nameApp
+                            .time-app= timeApps[index]
+        .foot.rounded-bottom-3.d-flex.justify-content-between.align-items-center
+            .info.rounded-3.p-1.d-flex.justify-content-center.align-items-center
+                .user-icon.d-flex.justify-content-center.align-items-center
+                    i.fa-regular.fa-user
+                span.name.user-select-none
+                    | Besho
+            .power.rounded-3.d-flex.justify-content-center.align-items-center
+                i.fa-solid.fa-power-off.icon
+            .power-info.rounded-3.p-2.user-select-none
+                .sleep.rounded-1.p-1
+                    i.fa-regular.fa-moon.fa-lg.ps-2
+                    span Sleep
+                .shut-down.rounded-1.p-1
+                    i.fa-solid.fa-power-off.fa-lg.ps-2
+                    span Shut down
+                .restart.rounded-1.p-1
+                    i.fa-solid.fa-arrow-rotate-left.fa-lg.ps-2
+                    span Restart
+            .user-info.rounded-3.p-2.user-select-none
+                .lock.rounded-1.p-1
+                    i.fa-solid.fa-lock.fa-lg.ps-2
+                    span Lock
+                .sign-out.rounded-1.p-1
+                    i.fa-solid.fa-sign-out.fa-lg.ps-2
+                    span Sign Out
+
+    .search-bar.rounded-3.p-3.pt-4
+        .search
+            i.fa-solid.fa-magnifying-glass.icon
+            input.input-search.rounded-5.p-1.ps-5(type="text" placeholder="Search for apps, settings, and documents")
+        .suggest.pt-4.ms-0.ms-md-3.me-3
+            .title
+                span.name.user-select-none.ms-0.ms-md-3
+                    | Suggested
+            .apps.row.pt-3.ms-0.ms-md-2
+                - var namesApps = ['VS Code', 'Adobe XD', 'GitHub', 'Mail', 'Microsoft Team', 'Skype', 'Microsoft Edge', 'Adobe Acrobat', 'Calculator', 'Calendar']
+                - var iconsApps = ['vscode.svg', 'xd.svg', 'github.svg', 'mail.svg', 'microsoft-team.svg', 'skype.svg', 'edge.svg', 'pdf.svg', 'calculator.svg', 'calendar.svg']
+                each nameApp, index in namesApps
+                    .app.col-6.rounded-3.p-2.ps-3
+                        .icon-app.user-select-none: img(src=`imgs/${iconsApps[index]}`, alt= iconsApps[index])
+                        .name-app.user-select-none= nameApp
+
+    .settings-bar.rounded-3.ps-3.pe-3.pt-4.pb-1
+        .head.ms-0.ms-md-3.d-flex.align-items-center.user-select-none
+            i.fa-solid.fa-gear.fa-lg.icon
+            span.name Settings
+        .content.pt-3.ms-0.ms-md-2
+            - var namesSettings = ['Dark Mode', 'Show Clock', 'Show News', 'Show Desktop Icons', 'Show Taskbar']
+            - var classSettings = ['one', 'two', 'three', 'four', 'five']
+            each nameSetting, index in namesSettings
+                .option.rounded-3.mb-2.p-3.d-flex.justify-content-between.align-items-center
+                    .name-setting.user-select-none= nameSetting
+                    label.check
+                        input(type="checkbox" checked class= classSettings[index]).toggle-checkbox
+                        .toggle-switch

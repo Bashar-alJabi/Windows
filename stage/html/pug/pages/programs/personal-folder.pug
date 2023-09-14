@@ -1,0 +1,19 @@
+extend pc.pug
+
+block variables
+    -var classApp = 'personal-folder'
+    -var nameApp = 'Besho'
+    -var iconApp = 'folder.svg'
+
+block content
+    .content.p-3.pe-0.me-2
+        .contain.row
+            - var namesApps = ['Adobe XD', 'VS Code', 'Team', 'Skype', 'GitHub', 'Edge', 'Mail', 'Adobe Acrobat', 'Notepad']
+            - var iconsApps = ['xd.svg', 'vscode.svg', 'microsoft-team.svg', 'skype.svg', 'github.svg', 'edge.svg', 'mail.svg', 'pdf.svg', 'notepad.svg']
+            each nameApp, index in namesApps
+                .program.col-4.p-2.rounded-3.text-center.d-flex.flex-column.justify-content-center.align-items-center
+                    .icon-app: img(src=`imgs/${iconsApps[index]}`, alt= iconsApps[index])
+                    .name-app= nameApp
+
+block spanFoot
+    span.counter 9 items |

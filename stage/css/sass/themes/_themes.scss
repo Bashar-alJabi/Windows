@@ -1,0 +1,354 @@
+$themes: (
+	dark-theme: (
+		backgroundQuarter: rgba(25, 25, 25, 0.25),
+		backgroundHalf: rgba(0, 0, 0, 0.4),
+		backgroundFull: rgba(0, 0, 0, 0.6),
+		colorT: #ecf0f1,
+        linkColor: #aaa,
+        linkAltColor: #ccc,
+        moreOptionBack: rgba(250, 250, 250, 0.25),
+        whiteBlack: #fff,
+        blackWhite: #000,
+        titleSettings: #b145e9,
+        iconWindows: #3498db,
+        iconSearch: #ecf0f1,
+        iconSettings: #95a5a6,
+        backIconWindows: #e67e22,
+        backIconSearch: #2ecc71,
+        backIconSettings: #b145e9,
+	),
+	light-theme: (
+		backgroundQuarter: rgba(255, 255, 255, 0.25),
+		// backgroundHalf: rgba(206, 207, 237, 0.4),
+		backgroundHalf: rgba(230, 230, 230, 0.4),
+		backgroundFull: #cecfed,
+		colorT: #000,
+        linkColor: #555,
+        linkAltColor: #333,
+        moreOptionBack: rgba(250, 250, 250, 0.3),
+        whiteBlack: #000,
+        blackWhite: #fff,
+        titleSettings: #82539a,
+        iconWindows: #222,
+        iconSearch: #222,
+        iconSettings: #222,
+        backIconWindows: #aaa,
+        backIconSearch: #aaa,
+        backIconSettings: #aaa,
+	),
+);
+
+@each $theme, $map in $themes {
+	.#{$theme} {
+		$backgroundQuarter: map-get($map, backgroundQuarter);
+		$backgroundHalf: map-get($map, backgroundHalf);
+		$backgroundFull: map-get($map, backgroundFull);
+		$Color: map-get($map, colorT);
+		$linkColor: map-get($map, linkColor);
+		$linkAltColor: map-get($map, linkAltColor);
+		$moreOptionBack: map-get($map, moreOptionBack);
+		$whiteBlack: map-get($map, whiteBlack);
+		$blackWhite: map-get($map, blackWhite);
+		$titleSettings: map-get($map, titleSettings);
+		$iconWindows: map-get($map, iconWindows);
+		$iconSettings: map-get($map, iconSettings);
+		$iconSearch: map-get($map, iconSearch);
+		$backIconWindows: map-get($map, backIconWindows);
+		$backIconSearch: map-get($map, backIconSearch);
+		$backIconSettings: map-get($map, backIconSettings);
+		.desktop-page {
+			.time-desktop {
+				color: $Color;
+			}
+			.widgets .news {
+				background-color: $backgroundQuarter;
+				.head {
+					color: $Color;
+					.more-options {
+						background-color: $moreOptionBack;
+					}
+				}
+				.content {
+					color: $linkAltColor
+				}
+                .foot .all-news {
+                    color: $linkColor;
+                    &:hover {
+                        color: $linkAltColor;
+                    }
+                }
+			}
+            .desktop-programs .apps .app .app-desktop {
+                color: $Color;
+            }
+		}
+        .taskbar-nav {
+            .fullscreen {
+                background-color: $backgroundHalf;
+                &:hover {
+                    background-color: $backgroundFull;
+                }
+                .icon {
+                    color: $Color;
+                }
+            }
+            .weather {
+                .info {
+                    background-color: $backgroundHalf;
+                    &:hover {
+                        background-color: $backgroundFull;
+                    }
+                    .content span {
+                        color: $Color;
+                    }
+                }
+                .full-info {
+                    background-color: $backgroundHalf;
+                    .content {
+                        .name, .temp, .status, .clouds, .wind, .hum{
+                            span {
+                                color: $Color;
+                            }
+                        }
+                        .name .city, .name .country {
+                            color: $Color;
+                        }
+                    }
+                }
+            }
+            .folders {
+                .folders-icon {
+                    background-color: $backgroundHalf;
+                    &:hover {
+                        background-color: $backgroundFull;
+                    }
+                    .icon {
+                        color: $Color;
+                    }
+                }
+                .list-folders {
+                    background-color: $backgroundHalf;
+                    .program {
+                        &:hover, &.selected {
+                            background-color: $backgroundQuarter;
+                        }
+                    }
+                }
+            }
+            .navigation {
+                .main-menu {
+                    background-color: $backgroundHalf;
+                    &:hover {
+                        background-color: $backgroundFull;
+                        ul li::before {
+                            background-color: $backgroundFull;
+                        }
+                    }
+                    ul {
+                        li {
+                            &::before {
+                                background-color: $backgroundHalf;
+                            }
+                            &:hover .icon, &.active .icon{
+                                color: $whiteBlack;
+                            }
+                            .fa-windows {
+                                color: $iconWindows;
+                            }
+                            .fa-magnifying-glass {
+                                color: $iconSearch;
+                            }
+                            .fa-gear {
+                                color: $iconSettings;
+                            }
+                        }
+                        li.menu::after {
+                            background-color: $backIconWindows;
+                        }
+                        li.search::after {
+                            background-color: $backIconSearch;
+                        }
+                        li.settings::after {
+                            background-color: $backIconSettings;
+                        }
+                    }
+                }
+                .menu-bar {
+                    background-color: $backgroundHalf;
+                    color: $Color;
+                    .search .input-search {
+                        background-color: $backgroundHalf;
+                        color: $Color;
+                        &::placeholder {
+                            color: $linkColor;
+                        }
+                    }
+                    .pinned, .recommended {
+                        .title .button {
+                            color: $Color;
+                            .icon {
+                                color: $linkAltColor;
+                            }
+                        }
+                        .apps .app:hover {
+                            background-color: $backgroundQuarter;
+                        }
+                    }
+                    .recommended .apps .app .info .time-app {
+                        color: $linkColor;
+                    }
+                    .foot {
+                        background-color: $backgroundQuarter;
+                        .info {
+                            .name {
+                                color: $Color;
+                            }
+                        }
+                    }
+                }
+                .search-bar {
+                    background-color: $backgroundHalf;
+                    color: $Color;
+                    .search .input-search {
+                        background-color: $backgroundHalf;
+                        color: $Color;
+                        &::placeholder {
+                            color: $linkColor;
+                        }
+                    }
+                    .suggest .apps .app:hover {
+                        background-color: $backgroundQuarter;
+                    }
+                }
+                .settings-bar {
+                    background-color: $backgroundHalf;
+                    color: $Color;
+                    .head .name, .head .icon {
+                        color: $titleSettings;
+                    }
+                    .content .option:hover {
+                        background-color: $backgroundQuarter;
+                    }
+                }
+            }
+            .tools {
+                background-color: $backgroundHalf;
+                &:hover {
+                    background-color: $backgroundFull;
+                    &::before {
+                        background-color: $backgroundFull;
+                    }
+                }
+                &::before {
+                    background-color: $backgroundHalf;
+                }
+                .angle {
+                    .icon {
+                        color: $linkColor;
+                    }
+                    &:hover .icon {
+                        color: $linkAltColor;
+                    }
+                }
+                ul {
+                    li {
+                        &::before, &.active {
+                            background-color: $Color;
+                        }
+                        .icon {
+                            color: $Color;
+                        }
+                        &:hover .icon, &.active .icon {
+                            color: $blackWhite;
+                        }
+                    }
+                }
+                .control-brightness, .control-volume {
+                    background-color: $backgroundHalf;
+                    .number-range {
+                        color: $Color;
+                    }
+                }
+                .battery-info {
+                    background-color: $backgroundHalf;
+                    .info {
+                        color: $Color;
+                    }
+                    .remaining {
+                        color: $linkColor;
+                    }
+                }
+                .wifi-info, .bluetooth-info {
+                    background-color: $backgroundHalf;
+                    .head {
+                        .title {
+                            color: $Color;
+                        }
+                    }
+                    .content {
+                        color: $Color;
+                        .box {
+                            border-color: $linkAltColor;
+                            &.selected {
+                                background-color: $backgroundQuarter;
+                            }
+                            .info .icon {
+                                color: $linkAltColor;
+                            }
+                            .status {
+                                color: $linkAltColor;
+                            }
+                            .auto-connect {
+                                &::before {
+                                    border-color: $linkAltColor;
+                                }
+                                .text {
+                                    color: $linkAltColor;
+                                    &::after {
+                                        color: $Color
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .foot .all {
+                        color: $linkColor;
+                        &:hover {
+                            color: $linkAltColor;
+                        }
+                    }
+                }
+            }
+            .time-date {
+                background-color: $backgroundHalf;
+                &:hover {
+                    background-color: $backgroundFull;
+                }
+                .time span, .month span {
+                    color: $Color
+                }
+                .toolkit {
+                    background-color: $backgroundHalf;
+                    color: $Color;
+                }
+            }
+            .notifications {
+                .num-notifications {
+                    background-color: $backgroundHalf;
+                    color: $Color;
+                    &:hover {
+                        background-color: $backgroundFull;
+                    }
+                }
+            }
+        }
+        %scrollbar-Transparent {
+            &::-webkit-scrollbar-thumb {
+                background-color: $linkAltColor;
+            }
+            &::-webkit-scrollbar-thumb:hover {
+                background-color: $Color;
+            }
+        }
+	}
+}

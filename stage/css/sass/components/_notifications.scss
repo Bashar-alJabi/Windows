@@ -1,0 +1,70 @@
+.notifications {
+    position: relative;
+    .num-notifications {
+        // background-color: $halfTransparent;
+        backdrop-filter: $blur-25;
+        // color: $flatWhite;
+        @include circle(2rem);
+        border-top-right-radius: 0.4rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .notifications-list {
+        background-color: $flatGray;
+        width: 16rem;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        position: absolute;
+        top: -30rem;
+        left: 2.5rem;
+        transition: 0.3s;
+        z-index: 1000;
+        &.open {
+            left: -13.5rem;
+        }
+        .head {
+            color: $flatWhite;
+            margin-bottom: 0.5rem;
+            .clear {
+                font-size: 0.75rem;
+                color: $flatWhite;
+                transition: 0.3s;
+            }
+        }
+        .content {
+            height: 21rem;
+            overflow: auto;
+            color: $flatWhite;
+            transition: 0.3s;
+            @extend %scrollbar-Gray;
+            .box {
+                margin-right: 0.75rem;
+                margin-bottom: 1rem;
+                border-top: 1px solid #777;
+                transition: 0.3s;
+                .date {
+                    color: #aaa;
+                    font-size: 0.82rem;
+                    margin-bottom: 0.25rem;
+                    margin-top: 0.75rem;
+                }
+                .title {
+                    gap: 0.3rem;
+                    span {
+                        font-size: 0.85rem;
+                    }
+                }
+                .info {
+                    color: #888;
+                    font-size: 0.8rem;
+                    margin-top: 0.5rem;
+                    margin-bottom: 1rem;
+                }
+                .dismiss {
+                    color: $flatWhite;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

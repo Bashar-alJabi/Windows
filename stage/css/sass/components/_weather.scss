@@ -1,0 +1,72 @@
+.weather {
+    position: relative;
+    .info {
+        height: 2.75rem;
+        // background-color: $halfTransparent;
+        line-height: 1.3;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        .content {
+            span {
+                // color: $flatWhite;
+                font-size: 0.8rem;
+            }
+        }
+    }
+    .full-info {
+        position: absolute;
+        left: -2.25rem;
+        top: 3rem;
+        // background-color: $halfTransparent;
+        backdrop-filter: $blur-100;
+        transition: 0.3s;
+        z-index: 10;
+        &.open {
+            top: -19.5rem;
+        }
+        .head {
+            .text {
+                color: $green;
+                font-weight: bold;
+            }
+        }
+        .content {
+            border-top: 1px solid #777;
+            width: 11.1rem;
+            height: 16rem;
+            overflow: auto;
+            @extend %scrollbar-Transparent;
+            .name, .temp, .status, .clouds, .wind, .hum{
+                margin-bottom: 0.5rem;
+                // span {
+                    // color: $flatWhite;
+                // }
+            }
+            :first-child, :last-child {
+                margin-bottom: 0;
+            }
+            .name {
+                position: relative;
+                .city, .country {
+                    font-weight: bold;
+                    // color: $flatWhite
+                }
+            }
+            .temp {
+                color: mix($flatRed, #f00, 50%);
+            }
+            .status {
+                color: $flatGreen;
+            }
+            .clouds {
+                color: $flatBlueAlt;
+            }
+            .wind {
+                color: #888;
+            }
+            .hum {
+                color: #62a4c5;
+            }
+        }
+    }
+}

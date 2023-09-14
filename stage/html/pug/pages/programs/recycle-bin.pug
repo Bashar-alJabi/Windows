@@ -1,0 +1,13 @@
+extend pc.pug
+
+block variables
+    -var classApp = 'recycle-bin'
+    -var nameApp = 'Recycle Bin'
+    -var iconApp = 'recycle.svg'
+
+block content
+    .content.p-3.text-center
+        | This folder is empty.
+
+block spanFoot
+    span.counter 0 items |

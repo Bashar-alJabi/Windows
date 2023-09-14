@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="overlay-brightness">
+      <div class="desktop-page position-relative min-vh-100 overflow-hidden">
+        <div class="time-desktop text-center user-select-none">
+          <div class="clock fw-bold"><span></span></div>
+          <div class="date fw-bold"><span></span></div>
+        </div>
+        <div class="widgets">
+          <div class="news rounded-3">
+            <div class="head p-2 d-flex justify-content-between align-items-center"><span class="icon fw-bold user-select-none"><i class="fa-regular fa-newspaper"></i>News</span><span class="more-options rounded-5 d-flex justify-content-center align-items-center"><i class="fa-solid fa-ellipsis"></i></span>
+              <div class="option rounded-bottom-3 p-2 user-select-none">Hide News</div>
+            </div>
+            <div class="content p-2 m-2 text-center"></div>
+            <div class="foot d-flex justify-content-center p-2">
+              <div class="all-news text-center user-select-none">See Full News</div>
+            </div>
+          </div>
+          <div class="full-news rounded-3 p-3">
+            <div class="head mb-2 user-select-none"><span class="text">News</span>
+              <div class="close-button btn btn-secondary d-flex justify-content-center align-items-center"><i class="fa-solid fa-close fa-lg icon"></i></div>
+            </div>
+            <div class="content p-2 pt-3"></div>
+          </div>
+        </div>
+        <div class="desktop-programs">
+          <div class="apps d-flex align-items-center">
+            <div class="pc app rounded-3 text-center user-select-none">
+              <div class="icon-app"><img src="imgs/desktop.svg" alt="desktop.svg"></div>
+              <div class="pc app-desktop">This PC</div>
+            </div>
+            <div class="recycle-bin app rounded-3 text-center user-select-none">
+              <div class="icon-app"><img src="imgs/recycle.svg" alt="recycle.svg"></div>
+              <div class="recycle-bin app-desktop">Recycle Bin</div>
+            </div>
+            <div class="personal-folder app rounded-3 text-center user-select-none">
+              <div class="icon-app"><img src="imgs/folder.svg" alt="folder.svg"></div>
+              <div class="personal-folder app-desktop">Besho</div>
+            </div>
+          </div>
+          <div class="page-programs">
+            <div class="pc rounded-3 user-select-none">
+              <div class="head rounded-top-3 p-2 pb-0 d-flex justify-content-between align-items-center">
+                <div class="tab d-flex justify-content-between align-items-center">
+                  <div class="this-tab rounded-top-3 p-2 pe-3 d-flex justify-content-between align-items-center">
+                    <div class="image d-flex"><img src="imgs/desktop.svg" alt="desktop.svg"><span class="name">This Pc</span></div><i class="fa-solid fa-close icon"></i>
+                  </div>
+                  <div class="new-tab"><i class="fa-solid fa-plus icon"></i></div>
+                </div>
+                <div class="exit d-flex justify-content-between align-items-center">
+                  <div class="mini-button btn btn-outline-secondary d-flex justify-content-center align-items-center"><i class="fa-solid fa-compress icon"></i></div>
+                  <div class="close-button btn btn-outline-secondary d-flex justify-content-center align-items-center"><i class="fa-solid fa-close icon"></i></div>
+                </div>
+              </div>
+              <div class="options ps-2 pe-2 d-flex justify-content-start align-items-center">
+                <div class="new p-2 rounded-3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-circle-plus"></i><span>New</span><i class="fa-solid fa-chevron-down icon"></i></div>
+                <hr>
+                <div class="icons d-flex justify-content-center align-items-center"><i class="fa-solid fa-scissors icon"></i><i class="fa-regular fa-copy icon"></i><i class="fa-regular fa-paste icon"></i><i class="fa-regular fa-share-from-square icon"></i><i class="fa-regular fa-trash-can icon"></i></div>
+                <hr>
+                <div class="sort p-2 rounded-3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-arrows-up-down icon"></i><span>Sort</span><i class="fa-solid fa-chevron-down icon"></i></div>
+                <div class="view p-2 rounded-3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-list-ul icon"></i><span>View</span><i class="fa-solid fa-chevron-down icon"></i></div>
+                <hr>
+                <div class="dots"><i class="fa-solid fa-ellipsis icon"></i></div>
+              </div>
+              <div class="info p-2 d-flex justify-content-between align-items-center">
+                <div class="directions d-flex justify-content-center align-items-center">
+                  <div class="back-icon"><i class="fa-solid fa-arrow-left icon"></i></div>
+                  <div class="back-icon"><i class="fa-solid fa-arrow-right icon"></i></div>
+                  <div class="back-icon"><i class="fa-solid fa-chevron-down icon"></i></div>
+                  <div class="back-icon"><i class="fa-solid fa-arrow-up icon"></i></div>
+                </div>
+                <div class="root ms-4 me-4 p-2 d-flex justify-content-between align-items-center">
+                  <div class="left d-flex justify-content-center align-items-center"><img src="imgs/desktop.svg" alt="desktop.svg"><i class="fa-solid fa-chevron-right icon"></i><span class="name">This Pc</span></div>
+                  <div class="right d-flex justify-content-center align-items-center"><i class="fa-solid fa-chevron-down icon"></i><i class="fa-solid fa-rotate-right icon"></i></div>
+                </div>
+                <div class="search p-2 d-flex justify-content-between align-items-center">
+                  <input type="text" placeholder="Search This Pc"><i class="fa-solid fa-magnifying-glass icon"></i>
+                </div>
+              </div>
+              <div class="center d-flex">
+                <div class="sidebar p-3">
+                  <div class="top">
+                    <div class="home box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/home.svg" alt="home.svg"><span class="name">Home</span></div>
+                    <div class="cloud box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/cloud.svg" alt="cloud.svg"><span class="name">OneDrive - Personal</span></div>
+                  </div>
+                  <hr>
+                  <div class="middle">
+                    <div class="desktop-folder box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/desktop-folder.svg" alt="desktop.svg"><span class="name">Desktop</span></div>
+                    <div class="download box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/download.svg" alt="downloads.svg"><span class="name">Downloads</span></div>
+                    <div class="pictures box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/picture.svg" alt="pic.svg"><span class="name">Pictures</span></div>
+                    <div class="music box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/music.svg" alt="music.svg"><span class="name">Music</span></div>
+                    <div class="videos box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/video.svg" alt="vid.svg"><span class="name">Videos</span></div>
+                  </div>
+                  <hr>
+                  <div class="bottom">
+                    <div class="creative-cloud box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/creative-cloud.svg" alt="cloud-file.svg"><span class="name">Creative Clouds Files</span></div>
+                    <div class="network box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/network.svg" alt="net.svg"><span class="name">Network</span></div>
+                  </div>
+                </div>
+                <div class="content p-3">
+                  <div class="contain row align-items-center ps-3">
+                    <div class="disk-c col-3 rounded-3 p-2 d-flex align-items-center">
+                      <div class="image"><img src="imgs/hard.svg" alt="hard"></div>
+                      <div class="info">
+                        <div class="name">Local Disc (C:)</div>
+                        <div class="per rounded-1"><span class="rounded-start-1"></span></div>
+                        <div class="size">347 GB free of 487 GB</div>
+                      </div>
+                    </div>
+                    <div class="disk-d col-3 rounded-3 p-2 d-flex align-items-center">
+                      <div class="image"><img src="imgs/hard.svg" alt="hard"></div>
+                      <div class="info">
+                        <div class="name">Local Disc (D:)</div>
+                        <div class="per rounded-1"><span class="rounded-start-1"></span></div>
+                        <div class="size">229 GB free of 443 GB</div>
+                      </div>
+                    </div>
+                    <div class="dvd col-3 rounded-3 p-2 d-flex align-items-center">
+                      <div class="image"><img src="imgs/dvd.svg" alt="dvd"></div>
+                      <div class="info">
+                        <div class="name">DVD RW Drive (G:)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="foot p-1 ps-3 rounded-bottom-3"><span class="counter">3 items |</span>
+              </div>
+            </div>
+            <div class="recycle-bin rounded-3 user-select-none">
+              <div class="head rounded-top-3 p-2 pb-0 d-flex justify-content-between align-items-center">
+                <div class="tab d-flex justify-content-between align-items-center">
+                  <div class="this-tab rounded-top-3 p-2 pe-3 d-flex justify-content-between align-items-center">
+                    <div class="image d-flex"><img src="imgs/recycle.svg" alt="recycle.svg"><span class="name">Recycle Bin</span></div><i class="fa-solid fa-close icon"></i>
+                  </div>
+                  <div class="new-tab"><i class="fa-solid fa-plus icon"></i></div>
+                </div>
+                <div class="exit d-flex justify-content-between align-items-center">
+                  <div class="mini-button btn btn-outline-secondary d-flex justify-content-center align-items-center"><i class="fa-solid fa-compress icon"></i></div>
+                  <div class="close-button btn btn-outline-secondary d-flex justify-content-center align-items-center"><i class="fa-solid fa-close icon"></i></div>
+                </div>
+              </div>
+              <div class="options ps-2 pe-2 d-flex justify-content-start align-items-center">
+                <div class="new p-2 rounded-3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-circle-plus"></i><span>New</span><i class="fa-solid fa-chevron-down icon"></i></div>
+                <hr>
+                <div class="icons d-flex justify-content-center align-items-center"><i class="fa-solid fa-scissors icon"></i><i class="fa-regular fa-copy icon"></i><i class="fa-regular fa-paste icon"></i><i class="fa-regular fa-share-from-square icon"></i><i class="fa-regular fa-trash-can icon"></i></div>
+                <hr>
+                <div class="sort p-2 rounded-3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-arrows-up-down icon"></i><span>Sort</span><i class="fa-solid fa-chevron-down icon"></i></div>
+                <div class="view p-2 rounded-3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-list-ul icon"></i><span>View</span><i class="fa-solid fa-chevron-down icon"></i></div>
+                <hr>
+                <div class="dots"><i class="fa-solid fa-ellipsis icon"></i></div>
+              </div>
+              <div class="info p-2 d-flex justify-content-between align-items-center">
+                <div class="directions d-flex justify-content-center align-items-center">
+                  <div class="back-icon"><i class="fa-solid fa-arrow-left icon"></i></div>
+                  <div class="back-icon"><i class="fa-solid fa-arrow-right icon"></i></div>
+                  <div class="back-icon"><i class="fa-solid fa-chevron-down icon"></i></div>
+                  <div class="back-icon"><i class="fa-solid fa-arrow-up icon"></i></div>
+                </div>
+                <div class="root ms-4 me-4 p-2 d-flex justify-content-between align-items-center">
+                  <div class="left d-flex justify-content-center align-items-center"><img src="imgs/recycle.svg" alt="recycle.svg"><i class="fa-solid fa-chevron-right icon"></i><span class="name">Recycle Bin</span></div>
+                  <div class="right d-flex justify-content-center align-items-center"><i class="fa-solid fa-chevron-down icon"></i><i class="fa-solid fa-rotate-right icon"></i></div>
+                </div>
+                <div class="search p-2 d-flex justify-content-between align-items-center">
+                  <input type="text" placeholder="Search Recycle Bin"><i class="fa-solid fa-magnifying-glass icon"></i>
+                </div>
+              </div>
+              <div class="center d-flex">
+                <div class="sidebar p-3">
+                  <div class="top">
+                    <div class="home box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/home.svg" alt="home.svg"><span class="name">Home</span></div>
+                    <div class="cloud box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/cloud.svg" alt="cloud.svg"><span class="name">OneDrive - Personal</span></div>
+                  </div>
+                  <hr>
+                  <div class="middle">
+                    <div class="desktop-folder box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/desktop-folder.svg" alt="desktop.svg"><span class="name">Desktop</span></div>
+                    <div class="download box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/download.svg" alt="downloads.svg"><span class="name">Downloads</span></div>
+                    <div class="pictures box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/picture.svg" alt="pic.svg"><span class="name">Pictures</span></div>
+                    <div class="music box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/music.svg" alt="music.svg"><span class="name">Music</span></div>
+                    <div class="videos box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/video.svg" alt="vid.svg"><span class="name">Videos</span></div>
+                  </div>
+                  <hr>
+                  <div class="bottom">
+                    <div class="creative-cloud box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/creative-cloud.svg" alt="cloud-file.svg"><span class="name">Creative Clouds Files</span></div>
+                    <div class="network box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/network.svg" alt="net.svg"><span class="name">Network</span></div>
+                  </div>
+                </div>
+                <div class="content p-3 text-center">This folder is empty.</div>
+              </div>
+              <div class="foot p-1 ps-3 rounded-bottom-3"><span class="counter">0 items |</span></div>
+            </div>
+            <div class="personal-folder rounded-3 user-select-none">
+              <div class="head rounded-top-3 p-2 pb-0 d-flex justify-content-between align-items-center">
+                <div class="tab d-flex justify-content-between align-items-center">
+                  <div class="this-tab rounded-top-3 p-2 pe-3 d-flex justify-content-between align-items-center">
+                    <div class="image d-flex"><img src="imgs/folder.svg" alt="folder.svg"><span class="name">Besho</span></div><i class="fa-solid fa-close icon"></i>
+                  </div>
+                  <div class="new-tab"><i class="fa-solid fa-plus icon"></i></div>
+                </div>
+                <div class="exit d-flex justify-content-between align-items-center">
+                  <div class="mini-button btn btn-outline-secondary d-flex justify-content-center align-items-center"><i class="fa-solid fa-compress icon"></i></div>
+                  <div class="close-button btn btn-outline-secondary d-flex justify-content-center align-items-center"><i class="fa-solid fa-close icon"></i></div>
+                </div>
+              </div>
+              <div class="options ps-2 pe-2 d-flex justify-content-start align-items-center">
+                <div class="new p-2 rounded-3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-circle-plus"></i><span>New</span><i class="fa-solid fa-chevron-down icon"></i></div>
+                <hr>
+                <div class="icons d-flex justify-content-center align-items-center"><i class="fa-solid fa-scissors icon"></i><i class="fa-regular fa-copy icon"></i><i class="fa-regular fa-paste icon"></i><i class="fa-regular fa-share-from-square icon"></i><i class="fa-regular fa-trash-can icon"></i></div>
+                <hr>
+                <div class="sort p-2 rounded-3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-arrows-up-down icon"></i><span>Sort</span><i class="fa-solid fa-chevron-down icon"></i></div>
+                <div class="view p-2 rounded-3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-list-ul icon"></i><span>View</span><i class="fa-solid fa-chevron-down icon"></i></div>
+                <hr>
+                <div class="dots"><i class="fa-solid fa-ellipsis icon"></i></div>
+              </div>
+              <div class="info p-2 d-flex justify-content-between align-items-center">
+                <div class="directions d-flex justify-content-center align-items-center">
+                  <div class="back-icon"><i class="fa-solid fa-arrow-left icon"></i></div>
+                  <div class="back-icon"><i class="fa-solid fa-arrow-right icon"></i></div>
+                  <div class="back-icon"><i class="fa-solid fa-chevron-down icon"></i></div>
+                  <div class="back-icon"><i class="fa-solid fa-arrow-up icon"></i></div>
+                </div>
+                <div class="root ms-4 me-4 p-2 d-flex justify-content-between align-items-center">
+                  <div class="left d-flex justify-content-center align-items-center"><img src="imgs/folder.svg" alt="folder.svg"><i class="fa-solid fa-chevron-right icon"></i><span class="name">Besho</span></div>
+                  <div class="right d-flex justify-content-center align-items-center"><i class="fa-solid fa-chevron-down icon"></i><i class="fa-solid fa-rotate-right icon"></i></div>
+                </div>
+                <div class="search p-2 d-flex justify-content-between align-items-center">
+                  <input type="text" placeholder="Search Besho"><i class="fa-solid fa-magnifying-glass icon"></i>
+                </div>
+              </div>
+              <div class="center d-flex">
+                <div class="sidebar p-3">
+                  <div class="top">
+                    <div class="home box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/home.svg" alt="home.svg"><span class="name">Home</span></div>
+                    <div class="cloud box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/cloud.svg" alt="cloud.svg"><span class="name">OneDrive - Personal</span></div>
+                  </div>
+                  <hr>
+                  <div class="middle">
+                    <div class="desktop-folder box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/desktop-folder.svg" alt="desktop.svg"><span class="name">Desktop</span></div>
+                    <div class="download box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/download.svg" alt="downloads.svg"><span class="name">Downloads</span></div>
+                    <div class="pictures box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/picture.svg" alt="pic.svg"><span class="name">Pictures</span></div>
+                    <div class="music box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/music.svg" alt="music.svg"><span class="name">Music</span></div>
+                    <div class="videos box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/video.svg" alt="vid.svg"><span class="name">Videos</span></div>
+                  </div>
+                  <hr>
+                  <div class="bottom">
+                    <div class="creative-cloud box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/creative-cloud.svg" alt="cloud-file.svg"><span class="name">Creative Clouds Files</span></div>
+                    <div class="network box rounded-3 p-1 d-flex justify-content-start align-items-center"><img src="imgs/network.svg" alt="net.svg"><span class="name">Network</span></div>
+                  </div>
+                </div>
+                <div class="content p-3 pe-0 me-2">
+                  <div class="contain row">
+                    <div class="program col-4 p-2 rounded-3 text-center d-flex flex-column justify-content-center align-items-center">
+                      <div class="icon-app"><img src="imgs/xd.svg" alt="xd.svg"></div>
+                      <div class="name-app">Adobe XD</div>
+                    </div>
+                    <div class="program col-4 p-2 rounded-3 text-center d-flex flex-column justify-content-center align-items-center">
+                      <div class="icon-app"><img src="imgs/vscode.svg" alt="vscode.svg"></div>
+                      <div class="name-app">VS Code</div>
+                    </div>
+                    <div class="program col-4 p-2 rounded-3 text-center d-flex flex-column justify-content-center align-items-center">
+                      <div class="icon-app"><img src="imgs/microsoft-team.svg" alt="microsoft-team.svg"></div>
+                      <div class="name-app">Team</div>
+                    </div>
+                    <div class="program col-4 p-2 rounded-3 text-center d-flex flex-column justify-content-center align-items-center">
+                      <div class="icon-app"><img src="imgs/skype.svg" alt="skype.svg"></div>
+                      <div class="name-app">Skype</div>
+                    </div>
+                    <div class="program col-4 p-2 rounded-3 text-center d-flex flex-column justify-content-center align-items-center">
+                      <div class="icon-app"><img src="imgs/github.svg" alt="github.svg"></div>
+                      <div class="name-app">GitHub</div>
+                    </div>
+                    <div class="program col-4 p-2 rounded-3 text-center d-flex flex-column justify-content-center align-items-center">
+                      <div class="icon-app"><img src="imgs/edge.svg" alt="edge.svg"></div>
+                      <div class="name-app">Edge</div>
+                    </div>
+                    <div class="program col-4 p-2 rounded-3 text-center d-flex flex-column justify-content-center align-items-center">
+                      <div class="icon-app"><img src="imgs/mail.svg" alt="mail.svg"></div>
+                      <div class="name-app">Mail</div>
+                    </div>
+                    <div class="program col-4 p-2 rounded-3 text-center d-flex flex-column justify-content-center align-items-center">
+                      <div class="icon-app"><img src="imgs/pdf.svg" alt="pdf.svg"></div>
+                      <div class="name-app">Adobe Acrobat</div>
+                    </div>
+                    <div class="program col-4 p-2 rounded-3 text-center d-flex flex-column justify-content-center align-items-center">
+                      <div class="icon-app"><img src="imgs/notepad.svg" alt="notepad.svg"></div>
+                      <div class="name-app">Notepad</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="foot p-1 ps-3 rounded-bottom-3"><span class="counter">9 items |</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="taskbar-nav position-absolute d-flex justify-content-between align-items-center">
+          <div class="left-container d-none d-md-flex justify-content-between align-items-end">
+            <div class="fullscreen"><i class="fas fa-expand-alt icon"></i></div>
+            <div class="weather user-select-none">
+              <div class="info rounded-top-3 p-2 ps-0 pe-3 d-flex justify-content-between align-items-center">
+                <div class="icon"></div>
+                <div class="content d-flex flex-column"><span class="city"></span><span class="temp"></span></div>
+              </div>
+              <div class="full-info rounded-3 p-2">
+                <div class="head mb-1 user-select-none"><span class="text">Weather</span></div>
+                <div class="content p-2 pt-3">
+                  <div class="name"><span class="city"></span><span class="country"></span></div>
+                  <div class="icon"></div>
+                  <div class="temp">Temperature:<span></span></div>
+                  <div class="status">Status:<span></span></div>
+                  <div class="clouds">Clouds:<span></span></div>
+                  <div class="wind">Wind:<span></span></div>
+                  <div class="hum">Humidity:<span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="folders-container">
+            <div class="folders user-select-none">
+              <div class="folders-icon d-flex justify-content-center align-items-center"><i class="fa-regular fa-folder icon"></i></div>
+              <div class="list-folders p-2 rounded-3 d-flex align-items-center">
+                <div class="program rounded-3 p-2 ms-1 me-1"><img src="imgs/xd.svg" alt="xd.svg"></div>
+                <div class="program rounded-3 p-2 ms-1 me-1"><img src="imgs/vscode.svg" alt="vscode.svg"></div>
+                <div class="program rounded-3 p-2 ms-1 me-1"><img src="imgs/microsoft-team.svg" alt="microsoft-team.svg"></div>
+                <div class="program rounded-3 p-2 ms-1 me-1"><img src="imgs/skype.svg" alt="skype.svg"></div>
+                <div class="program rounded-3 p-2 ms-1 me-1"><img src="imgs/github.svg" alt="github.svg"></div>
+                <div class="program rounded-3 p-2 ms-1 me-1"><img src="imgs/edge.svg" alt="edge.svg"></div>
+              </div>
+            </div>
+          </div>
+          <div class="center-container">
+            <div class="navigation">
+              <div class="main-menu rounded-top-3">
+                <ul class="list-unstyled d-flex justify-content-around align-items-center">
+                  <li class="menu"><i class="fa-brands fa-windows icon"></i></li>
+                  <li class="search"><i class="fa-solid fa-magnifying-glass icon"></i></li>
+                  <li class="settings"><i class="fa-solid fa-gear icon"></i></li>
+                </ul>
+              </div>
+              <div class="menu-bar rounded-3 p-3 pt-4">
+                <div class="search"><i class="fa-solid fa-magnifying-glass icon"></i>
+                  <input class="input-search rounded-5 p-1 ps-5" type="text" placeholder="Search for apps, settings, and documents">
+                </div>
+                <div class="pinned pt-4 ms-0 ms-md-3 me-3">
+                  <div class="title d-flex justify-content-between align-items-center"><span class="name user-select-none ms-0 ms-md-3">Pinned</span>
+                    <div class="button btn btn-secondary p-1 ps-2 pe-2 d-flex align-items-center">All apps<i class="fa-solid fa-angle-right icon"></i></div>
+                  </div>
+                  <div class="apps row text-center pt-3">
+                    <div class="app col-4 col-md-3 rounded-3 p-2 user-select-none">
+                      <div class="icon-app"><img src="imgs/calculator.svg" alt="calculator.svg"></div>
+                      <div class="name-app">Calculator</div>
+                    </div>
+                    <div class="app col-4 col-md-3 rounded-3 p-2 user-select-none">
+                      <div class="icon-app"><img src="imgs/calendar.svg" alt="calendar.svg"></div>
+                      <div class="name-app">Calender</div>
+                    </div>
+                    <div class="app col-4 col-md-3 rounded-3 p-2 user-select-none">
+                      <div class="icon-app"><img src="imgs/clock.svg" alt="clock.svg"></div>
+                      <div class="name-app">Clock</div>
+                    </div>
+                    <div class="app col-4 col-md-3 rounded-3 p-2 user-select-none">
+                      <div class="icon-app"><img src="imgs/notepad.svg" alt="notepad.svg"></div>
+                      <div class="name-app">Notepad</div>
+                    </div>
+                    <div class="app col-4 col-md-3 rounded-3 p-2 user-select-none">
+                      <div class="icon-app"><img src="imgs/github.svg" alt="github.svg"></div>
+                      <div class="name-app">GitHub</div>
+                    </div>
+                    <div class="app col-4 col-md-3 rounded-3 p-2 user-select-none">
+                      <div class="icon-app"><img src="imgs/xd.svg" alt="xd.svg"></div>
+                      <div class="name-app">Adobe XD</div>
+                    </div>
+                    <div class="app col-4 col-md-3 rounded-3 p-2 user-select-none">
+                      <div class="icon-app"><img src="imgs/mail.svg" alt="mail.svg"></div>
+                      <div class="name-app">Mail</div>
+                    </div>
+                    <div class="app col-4 col-md-3 rounded-3 p-2 user-select-none">
+                      <div class="icon-app"><img src="imgs/Microsoft_365.svg" alt="Microsoft_365.svg"></div>
+                      <div class="name-app">Microsoft 365</div>
+                    </div>
+                    <div class="app col-4 col-md-3 rounded-3 p-2 user-select-none">
+                      <div class="icon-app"><img src="imgs/photos.svg" alt="photos.svg"></div>
+                      <div class="name-app">Photos</div>
+                    </div>
+                    <div class="app col-4 col-md-3 rounded-3 p-2 user-select-none">
+                      <div class="icon-app"><img src="imgs/movies.svg" alt="movies.svg"></div>
+                      <div class="name-app">Movies &amp; TV</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="recommended pt-4 ms-0 ms-md-3 me-3">
+                  <div class="title d-flex justify-content-between align-items-center"><span class="name user-select-none ms-0 ms-md-3">Recommended</span>
+                    <div class="button btn btn-secondary p-1 ps-2 pe-2 d-flex align-items-center">More<i class="fa-solid fa-angle-right icon"></i></div>
+                  </div>
+                  <div class="apps row pt-3 ms-0 ms-md-2">
+                    <div class="app col-6 rounded-3 p-2 ps-3 d-flex justify-content-start align-items-center user-select-none">
+                      <div class="icon-app"><img src="imgs/vscode.svg" alt="vscode.svg"></div>
+                      <div class="info">
+                        <div class="name-app">VS Code</div>
+                        <div class="time-app">1h ago</div>
+                      </div>
+                    </div>
+                    <div class="app col-6 rounded-3 p-2 ps-3 d-flex justify-content-start align-items-center user-select-none">
+                      <div class="icon-app"><img src="imgs/edge.svg" alt="edge.svg"></div>
+                      <div class="info">
+                        <div class="name-app">desktop.html</div>
+                        <div class="time-app">7h ago</div>
+                      </div>
+                    </div>
+                    <div class="app col-6 rounded-3 p-2 ps-3 d-flex justify-content-start align-items-center user-select-none">
+                      <div class="icon-app"><img src="imgs/microsoft-team.svg" alt="microsoft-team.svg"></div>
+                      <div class="info">
+                        <div class="name-app">Microsoft Team</div>
+                        <div class="time-app">11h ago</div>
+                      </div>
+                    </div>
+                    <div class="app col-6 rounded-3 p-2 ps-3 d-flex justify-content-start align-items-center user-select-none">
+                      <div class="icon-app"><img src="imgs/skype.svg" alt="skype.svg"></div>
+                      <div class="info">
+                        <div class="name-app">Skype</div>
+                        <div class="time-app">15h ago</div>
+                      </div>
+                    </div>
+                    <div class="app col-6 rounded-3 p-2 ps-3 d-flex justify-content-start align-items-center user-select-none">
+                      <div class="icon-app"><img src="imgs/pdf.svg" alt="pdf.svg"></div>
+                      <div class="info">
+                        <div class="name-app">Adobe Acrobat</div>
+                        <div class="time-app">Friday</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="foot rounded-bottom-3 d-flex justify-content-between align-items-center">
+                  <div class="info rounded-3 p-1 d-flex justify-content-center align-items-center">
+                    <div class="user-icon d-flex justify-content-center align-items-center"><i class="fa-regular fa-user"></i></div><span class="name user-select-none">Besho</span>
+                  </div>
+                  <div class="power rounded-3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-power-off icon"></i></div>
+                  <div class="power-info rounded-3 p-2 user-select-none">
+                    <div class="sleep rounded-1 p-1"><i class="fa-regular fa-moon fa-lg ps-2"></i><span>Sleep</span></div>
+                    <div class="shut-down rounded-1 p-1"><i class="fa-solid fa-power-off fa-lg ps-2"></i><span>Shut down</span></div>
+                    <div class="restart rounded-1 p-1"><i class="fa-solid fa-arrow-rotate-left fa-lg ps-2"></i><span>Restart</span></div>
+                  </div>
+                  <div class="user-info rounded-3 p-2 user-select-none">
+                    <div class="lock rounded-1 p-1"><i class="fa-solid fa-lock fa-lg ps-2"></i><span>Lock</span></div>
+                    <div class="sign-out rounded-1 p-1"><i class="fa-solid fa-sign-out fa-lg ps-2"></i><span>Sign Out</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-bar rounded-3 p-3 pt-4">
+                <div class="search"><i class="fa-solid fa-magnifying-glass icon"></i>
+                  <input class="input-search rounded-5 p-1 ps-5" type="text" placeholder="Search for apps, settings, and documents">
+                </div>
+                <div class="suggest pt-4 ms-0 ms-md-3 me-3">
+                  <div class="title"><span class="name user-select-none ms-0 ms-md-3">Suggested</span></div>
+                  <div class="apps row pt-3 ms-0 ms-md-2">
+                    <div class="app col-6 rounded-3 p-2 ps-3">
+                      <div class="icon-app user-select-none"><img src="imgs/vscode.svg" alt="vscode.svg"></div>
+                      <div class="name-app user-select-none">VS Code</div>
+                    </div>
+                    <div class="app col-6 rounded-3 p-2 ps-3">
+                      <div class="icon-app user-select-none"><img src="imgs/xd.svg" alt="xd.svg"></div>
+                      <div class="name-app user-select-none">Adobe XD</div>
+                    </div>
+                    <div class="app col-6 rounded-3 p-2 ps-3">
+                      <div class="icon-app user-select-none"><img src="imgs/github.svg" alt="github.svg"></div>
+                      <div class="name-app user-select-none">GitHub</div>
+                    </div>
+                    <div class="app col-6 rounded-3 p-2 ps-3">
+                      <div class="icon-app user-select-none"><img src="imgs/mail.svg" alt="mail.svg"></div>
+                      <div class="name-app user-select-none">Mail</div>
+                    </div>
+                    <div class="app col-6 rounded-3 p-2 ps-3">
+                      <div class="icon-app user-select-none"><img src="imgs/microsoft-team.svg" alt="microsoft-team.svg"></div>
+                      <div class="name-app user-select-none">Microsoft Team</div>
+                    </div>
+                    <div class="app col-6 rounded-3 p-2 ps-3">
+                      <div class="icon-app user-select-none"><img src="imgs/skype.svg" alt="skype.svg"></div>
+                      <div class="name-app user-select-none">Skype</div>
+                    </div>
+                    <div class="app col-6 rounded-3 p-2 ps-3">
+                      <div class="icon-app user-select-none"><img src="imgs/edge.svg" alt="edge.svg"></div>
+                      <div class="name-app user-select-none">Microsoft Edge</div>
+                    </div>
+                    <div class="app col-6 rounded-3 p-2 ps-3">
+                      <div class="icon-app user-select-none"><img src="imgs/pdf.svg" alt="pdf.svg"></div>
+                      <div class="name-app user-select-none">Adobe Acrobat</div>
+                    </div>
+                    <div class="app col-6 rounded-3 p-2 ps-3">
+                      <div class="icon-app user-select-none"><img src="imgs/calculator.svg" alt="calculator.svg"></div>
+                      <div class="name-app user-select-none">Calculator</div>
+                    </div>
+                    <div class="app col-6 rounded-3 p-2 ps-3">
+                      <div class="icon-app user-select-none"><img src="imgs/calendar.svg" alt="calendar.svg"></div>
+                      <div class="name-app user-select-none">Calendar</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="settings-bar rounded-3 ps-3 pe-3 pt-4 pb-1">
+                <div class="head ms-0 ms-md-3 d-flex align-items-center user-select-none"><i class="fa-solid fa-gear fa-lg icon"></i><span class="name">Settings</span></div>
+                <div class="content pt-3 ms-0 ms-md-2">
+                  <div class="option rounded-3 mb-2 p-3 d-flex justify-content-between align-items-center">
+                    <div class="name-setting user-select-none">Dark Mode</div>
+                    <label class="check">
+                      <input class="one toggle-checkbox" type="checkbox" checked>
+                      <div class="toggle-switch"></div>
+                    </label>
+                  </div>
+                  <div class="option rounded-3 mb-2 p-3 d-flex justify-content-between align-items-center">
+                    <div class="name-setting user-select-none">Show Clock</div>
+                    <label class="check">
+                      <input class="two toggle-checkbox" type="checkbox" checked>
+                      <div class="toggle-switch"></div>
+                    </label>
+                  </div>
+                  <div class="option rounded-3 mb-2 p-3 d-flex justify-content-between align-items-center">
+                    <div class="name-setting user-select-none">Show News</div>
+                    <label class="check">
+                      <input class="three toggle-checkbox" type="checkbox" checked>
+                      <div class="toggle-switch"></div>
+                    </label>
+                  </div>
+                  <div class="option rounded-3 mb-2 p-3 d-flex justify-content-between align-items-center">
+                    <div class="name-setting user-select-none">Show Desktop Icons</div>
+                    <label class="check">
+                      <input class="four toggle-checkbox" type="checkbox" checked>
+                      <div class="toggle-switch"></div>
+                    </label>
+                  </div>
+                  <div class="option rounded-3 mb-2 p-3 d-flex justify-content-between align-items-center">
+                    <div class="name-setting user-select-none">Show Taskbar</div>
+                    <label class="check">
+                      <input class="five toggle-checkbox" type="checkbox" checked>
+                      <div class="toggle-switch"></div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-container d-flex justify-content-between align-items-center">
+            <div class="tools rounded-top-3 p-2 d-none d-md-block">
+              <div class="angle"><i class="fa-solid fa-angle-left icon right"></i></div>
+              <ul class="open list-unstyled d-flex justify-content-around align-items-center">
+                <li class="wifi"><i class="fa-solid fa-wifi icon"></i></li>
+                <li class="bluetooth"><i class="fa-brands fa-bluetooth-b icon"></i></li>
+                <li class="brightness"><i class="fa-regular fa-sun icon"></i></li>
+                <li class="volume"><i class="fa-solid fa-volume-high icon"></i></li>
+                <li class="battery"><i class="fa-solid fa-battery-half icon"></i></li>
+              </ul>
+              <div class="control-brightness">
+                <input class="brightness-range" type="range" min="25" max="175" value="100"><span class="number-range user-select-none"></span>
+              </div>
+              <div class="control-volume">
+                <input class="volume-range" type="range" min="0" max="100" value="50"><span class="number-range user-select-none"></span>
+              </div>
+              <div class="battery-info rounded-3 p-3 user-select-none">
+                <div class="info">
+                  <div class="fa-solid fa-battery-half fa-2xl"></div><span class="ms-2">50%</span>
+                </div><span class="remaining">1 hours 22 minutes remaining</span>
+              </div>
+              <div class="wifi-info rounded-3 p-3">
+                <div class="head d-flex justify-content-between align-items-center">
+                  <div class="title d-flex align-items-center">
+                    <div class="icon"><i class="fa-solid fa-angle-left"></i></div><span class="ms-2 user-select-none">Wi-Fi</span>
+                  </div>
+                  <label class="check">
+                    <input class="toggle-checkbox" type="checkbox" checked>
+                    <div class="toggle-switch"></div>
+                  </label>
+                </div>
+                <div class="content mt-2 mb-2">
+                  <div class="box mt-2 mb-2 me-2 p-2 selected">
+                    <div class="info d-flex justify-content-between align-items-center mb-2"><i class="fa-solid fa-wifi"></i>
+                      <div class="text ms-2 user-select-none"><span class="name d-block">Home</span></div><i class="fa-solid fa-circle-info icon"></i>
+                    </div>
+                    <div class="status user-select-none">Secured</div>
+                    <div class="auto-connect mb-2">
+                      <input class="check" type="checkbox" id="0">
+                      <label class="text user-select-none" for="0">Connect automatically</label>
+                    </div>
+                    <div class="connect btn btn-info ps-4 pe-4 mt-1">Connect</div>
+                  </div>
+                  <div class="box mt-2 mb-2 me-2 p-2">
+                    <div class="info d-flex justify-content-between align-items-center mb-2"><i class="fa-solid fa-wifi"></i>
+                      <div class="text ms-2 user-select-none"><span class="name d-block">Job</span></div><i class="fa-solid fa-circle-info icon"></i>
+                    </div>
+                    <div class="status user-select-none">Secured</div>
+                    <div class="auto-connect mb-2">
+                      <input class="check" type="checkbox" id="1">
+                      <label class="text user-select-none" for="1">Connect automatically</label>
+                    </div>
+                    <div class="connect btn btn-info ps-4 pe-4 mt-1">Connect</div>
+                  </div>
+                  <div class="box mt-2 mb-2 me-2 p-2">
+                    <div class="info d-flex justify-content-between align-items-center mb-2"><i class="fa-solid fa-wifi"></i>
+                      <div class="text ms-2 user-select-none"><span class="name d-block">Hotel</span></div><i class="fa-solid fa-circle-info icon"></i>
+                    </div>
+                    <div class="status user-select-none">Secured</div>
+                    <div class="auto-connect mb-2">
+                      <input class="check" type="checkbox" id="2">
+                      <label class="text user-select-none" for="2">Connect automatically</label>
+                    </div>
+                    <div class="connect btn btn-info ps-4 pe-4 mt-1">Connect</div>
+                  </div>
+                  <div class="box mt-2 mb-2 me-2 p-2">
+                    <div class="info d-flex justify-content-between align-items-center mb-2"><i class="fa-solid fa-wifi"></i>
+                      <div class="text ms-2 user-select-none"><span class="name d-block">Restaurant</span></div><i class="fa-solid fa-circle-info icon"></i>
+                    </div>
+                    <div class="status user-select-none">Secured</div>
+                    <div class="auto-connect mb-2">
+                      <input class="check" type="checkbox" id="3">
+                      <label class="text user-select-none" for="3">Connect automatically</label>
+                    </div>
+                    <div class="connect btn btn-info ps-4 pe-4 mt-1">Connect</div>
+                  </div>
+                </div>
+                <div class="foot">
+                  <div class="all text-center user-select-none">More Wi-Fi settings</div>
+                </div>
+              </div>
+              <div class="bluetooth-info rounded-3 p-3">
+                <div class="head d-flex justify-content-between align-items-center">
+                  <div class="title d-flex align-items-center">
+                    <div class="icon"><i class="fa-solid fa-angle-left"></i></div><span class="ms-2 user-select-none">Bluetooth</span>
+                  </div>
+                  <label class="check">
+                    <input class="toggle-checkbox" type="checkbox" checked>
+                    <div class="toggle-switch"></div>
+                  </label>
+                </div>
+                <div class="content mt-2 mb-2">
+                  <div class="box mt-2 mb-2 me-2 p-2 selected">
+                    <div class="info d-flex justify-content-between align-items-center mb-2"><i class="fa-solid fa-desktop"></i>
+                      <div class="text ms-2 user-select-none"><span class="name d-block">Desktop</span></div><i class="fa-solid fa-circle-info icon"></i>
+                    </div>
+                    <div class="connect btn btn-info ps-4 pe-4 mt-1">Connect</div>
+                  </div>
+                  <div class="box mt-2 mb-2 me-2 p-2">
+                    <div class="info d-flex justify-content-between align-items-center mb-2"><i class="fa-solid fa-mobile-screen"></i>
+                      <div class="text ms-2 user-select-none"><span class="name d-block">Mi</span></div><i class="fa-solid fa-circle-info icon"></i>
+                    </div>
+                    <div class="connect btn btn-info ps-4 pe-4 mt-1">Connect</div>
+                  </div>
+                  <div class="box mt-2 mb-2 me-2 p-2">
+                    <div class="info d-flex justify-content-between align-items-center mb-2"><i class="fa-solid fa-headset"></i>
+                      <div class="text ms-2 user-select-none"><span class="name d-block">LBS</span></div><i class="fa-solid fa-circle-info icon"></i>
+                    </div>
+                    <div class="connect btn btn-info ps-4 pe-4 mt-1">Connect</div>
+                  </div>
+                  <div class="box mt-2 mb-2 me-2 p-2">
+                    <div class="info d-flex justify-content-between align-items-center mb-2"><i class="fa-solid fa-mobile-screen"></i>
+                      <div class="text ms-2 user-select-none"><span class="name d-block">Iphone</span></div><i class="fa-solid fa-circle-info icon"></i>
+                    </div>
+                    <div class="connect btn btn-info ps-4 pe-4 mt-1">Connect</div>
+                  </div>
+                  <div class="box mt-2 mb-2 me-2 p-2">
+                    <div class="info d-flex justify-content-between align-items-center mb-2"><i class="fa-solid fa-desktop"></i>
+                      <div class="text ms-2 user-select-none"><span class="name d-block">PC</span></div><i class="fa-solid fa-circle-info icon"></i>
+                    </div>
+                    <div class="connect btn btn-info ps-4 pe-4 mt-1">Connect</div>
+                  </div>
+                </div>
+                <div class="foot">
+                  <div class="all text-center user-select-none">More Bluetooth settings</div>
+                </div>
+              </div>
+            </div>
+            <div class="time-date rounded-top-3 p-2 user-select-none d-none d-md-block">
+              <div class="time"><span></span></div>
+              <div class="month"><span></span></div>
+              <div class="toolkit p-2 rounded-3"><span></span></div>
+            </div>
+            <div class="notifications"><span class="num-notifications user-select-none d-flex justify-content-center align-items-center"></span>
+              <div class="notifications-list p-3 user-select-none">
+                <div class="head d-flex justify-content-between align-items-center">
+                  <div class="text">Notifications</div>
+                  <div class="clear btn btn-outline-secondary p-1">Clear All</div>
+                </div>
+                <div class="content">
+                  <div class="box">
+                    <div class="date">12:05 PM</div>
+                    <div class="title d-flex align-items-center"><i class="fa-solid fa-shield-halved fa-sm"></i><span>Windows Security</span></div>
+                    <div class="info">Windows Firewall is turned off.</div>
+                    <div class="dismiss btn btn-outline-secondary p-1 w-100 text-center">Dismiss</div>
+                  </div>
+                  <div class="box">
+                    <div class="date">Friday</div>
+                    <div class="title d-flex align-items-center"><i class="fa-solid fa-battery-full fa-sm"></i><span>Battery Saver</span></div>
+                    <div class="info">Battery saver is on.</div>
+                    <div class="dismiss btn btn-outline-secondary p-1 w-100">Dismiss</div>
+                  </div>
+                  <div class="box">
+                    <div class="date">Thursday</div>
+                    <div class="title d-flex align-items-center"><i class="fa-solid fa-wrench fa-sm"></i><span>Windows Update</span></div>
+                    <div class="info">Window update successfully, Your device is up to date.</div>
+                    <div class="dismiss btn btn-outline-secondary p-1 w-100">Dismiss</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <audio id="startup-sound" src="sounds/Windows-Startup.mp3" preload="auto"></audio>
+    <script src="js/all.min.js"></script>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main-min.js"></script>
+  </body>
+</html>

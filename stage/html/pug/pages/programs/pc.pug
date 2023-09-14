@@ -1,0 +1,125 @@
+block variables
+    -var classApp = 'pc'
+    -var nameApp = 'This Pc'
+    -var iconApp = 'desktop.svg'
+
+div(class= classApp).rounded-3.user-select-none
+    .head.rounded-top-3.p-2.pb-0.d-flex.justify-content-between.align-items-center
+        .tab.d-flex.justify-content-between.align-items-center
+            .this-tab.rounded-top-3.p-2.pe-3.d-flex.justify-content-between.align-items-center
+                .image.d-flex
+                    img(src=`imgs/${iconApp}`, alt= iconApp)
+                    span.name #{nameApp}
+                i.fa-solid.fa-close.icon
+            .new-tab
+                i.fa-solid.fa-plus.icon
+        .exit.d-flex.justify-content-between.align-items-center
+            .mini-button.btn.btn-outline-secondary.d-flex.justify-content-center.align-items-center
+                i.fa-solid.fa-compress.icon
+            .close-button.btn.btn-outline-secondary.d-flex.justify-content-center.align-items-center
+                i.fa-solid.fa-close.icon
+
+    .options.ps-2.pe-2.d-flex.justify-content-start.align-items-center
+        .new.p-2.rounded-3.d-flex.justify-content-center.align-items-center
+            i.fa-solid.fa-circle-plus
+            span New
+            i.fa-solid.fa-chevron-down.icon
+        hr
+        .icons.d-flex.justify-content-center.align-items-center
+            i.fa-solid.fa-scissors.icon
+            i.fa-regular.fa-copy.icon
+            i.fa-regular.fa-paste.icon
+            i.fa-regular.fa-share-from-square.icon
+            i.fa-regular.fa-trash-can.icon
+        hr
+        .sort.p-2.rounded-3.d-flex.justify-content-center.align-items-center
+            i.fa-solid.fa-arrows-up-down.icon
+            span Sort
+            i.fa-solid.fa-chevron-down.icon
+        .view.p-2.rounded-3.d-flex.justify-content-center.align-items-center
+            i.fa-solid.fa-list-ul.icon
+            span View
+            i.fa-solid.fa-chevron-down.icon
+        hr
+        .dots
+            i.fa-solid.fa-ellipsis.icon
+
+    .info.p-2.d-flex.justify-content-between.align-items-center
+        .directions.d-flex.justify-content-center.align-items-center
+            .back-icon: i.fa-solid.fa-arrow-left.icon
+            .back-icon: i.fa-solid.fa-arrow-right.icon
+            .back-icon: i.fa-solid.fa-chevron-down.icon
+            .back-icon: i.fa-solid.fa-arrow-up.icon
+        .root.ms-4.me-4.p-2.d-flex.justify-content-between.align-items-center
+            .left.d-flex.justify-content-center.align-items-center
+                img(src=`imgs/${iconApp}`, alt= iconApp)
+                i.fa-solid.fa-chevron-right.icon
+                span.name #{nameApp}
+            .right.d-flex.justify-content-center.align-items-center
+                i.fa-solid.fa-chevron-down.icon
+                i.fa-solid.fa-rotate-right.icon
+        .search.p-2.d-flex.justify-content-between.align-items-center
+            input(type="text" placeholder=`Search ${nameApp}`)
+            i.fa-solid.fa-magnifying-glass.icon
+
+    .center.d-flex
+        .sidebar.p-3
+            .top
+                .home.box.rounded-3.p-1.d-flex.justify-content-start.align-items-center
+                    img(src='imgs/home.svg', alt='home.svg')
+                    span.name Home
+                .cloud.box.rounded-3.p-1.d-flex.justify-content-start.align-items-center
+                    img(src='imgs/cloud.svg', alt='cloud.svg')
+                    span.name OneDrive - Personal
+            hr
+            .middle
+                .desktop-folder.box.rounded-3.p-1.d-flex.justify-content-start.align-items-center
+                    img(src='imgs/desktop-folder.svg', alt='desktop.svg')
+                    span.name Desktop
+                .download.box.rounded-3.p-1.d-flex.justify-content-start.align-items-center
+                    img(src='imgs/download.svg', alt='downloads.svg')
+                    span.name Downloads
+                .pictures.box.rounded-3.p-1.d-flex.justify-content-start.align-items-center
+                    img(src='imgs/picture.svg', alt='pic.svg')
+                    span.name Pictures
+                .music.box.rounded-3.p-1.d-flex.justify-content-start.align-items-center
+                    img(src='imgs/music.svg', alt='music.svg')
+                    span.name Music
+                .videos.box.rounded-3.p-1.d-flex.justify-content-start.align-items-center
+                    img(src='imgs/video.svg', alt='vid.svg')
+                    span.name Videos
+            hr
+            .bottom
+                .creative-cloud.box.rounded-3.p-1.d-flex.justify-content-start.align-items-center
+                    img(src='imgs/creative-cloud.svg', alt='cloud-file.svg')
+                    span.name Creative Clouds Files
+                .network.box.rounded-3.p-1.d-flex.justify-content-start.align-items-center
+                    img(src='imgs/network.svg', alt='net.svg')
+                    span.name Network
+
+        block content
+            .content.p-3
+                .contain.row.align-items-center.ps-3
+                    .disk-c.col-3.rounded-3.p-2.d-flex.align-items-center
+                        .image
+                            img(src='imgs/hard.svg', alt='hard')
+                        .info
+                            .name Local Disc (C:)
+                            .per.rounded-1: span.rounded-start-1
+                            .size 347 GB free of 487 GB
+                    .disk-d.col-3.rounded-3.p-2.d-flex.align-items-center
+                        .image
+                            img(src='imgs/hard.svg', alt='hard')
+                        .info
+                            .name Local Disc (D:)
+                            .per.rounded-1: span.rounded-start-1
+                            .size 229 GB free of 443 GB
+                    .dvd.col-3.rounded-3.p-2.d-flex.align-items-center
+                        .image
+                            img(src='imgs/dvd.svg', alt='dvd')
+                        .info
+                            .name DVD RW Drive (G:)
+
+    .foot.p-1.ps-3.rounded-bottom-3
+        block spanFoot
+            span.counter 3 items |

@@ -1,0 +1,9 @@
+.folders.user-select-none
+    .folders-icon.d-flex.justify-content-center.align-items-center
+        i.fa-regular.fa-folder.icon
+    .list-folders.p-2.rounded-3.d-flex.align-items-center
+        - var namesApps = ['Adobe XD', 'VS Code', 'Microsoft Team', 'Skype', 'GitHub', 'Microsoft Edge']
+        - var iconsApps = ['xd.svg', 'vscode.svg', 'microsoft-team.svg', 'skype.svg', 'github.svg', 'edge.svg']
+        each nameApp, index in namesApps
+            .program.rounded-3.p-2.ms-1.me-1
+                img(src=`imgs/${iconsApps[index]}`, alt= iconsApps[index])
